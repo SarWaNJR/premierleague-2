@@ -9,6 +9,7 @@
     <style>
         body {
             margin: 0 auto;
+            background-color: #2596be;
         }
 
         .grid {
@@ -165,9 +166,42 @@
             color: #fff;
             text-decoration: none;
         }
-        @media only and screen(max-width:550px){
-            grid {width:25%;}
-            .table{width:100%;}
+
+        @media only screen and (max-width:550px) {
+            * {
+                width: 100%;
+            }
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1px;
+                flex-wrap: wrap;
+                background-color: #3f1052;
+                color: #ffff;
+                justify-content: space-between;
+                margin-left: 0%;
+                padding: 8%;
+            }
+
+            .match,
+            .news,
+            .stand,
+            .stats,
+            .players {
+                padding-left: 0;
+                justify-content: flex-start;
+            }
+
+            body {
+                margin: 0 auto;
+                background-color: #2596be;
+            }
+
+            .table {
+                width: 100%;
+                margin: 8%;
+            }
         }
     </style>
 </head>
@@ -197,8 +231,8 @@
         <p>
             Season
         </p>
-        <p style="color: #4285F4;cursor: pointer; display: inline-block;margin-top:0;">2022-23</p>
-        <select style="width: 20px;border: none;color: #4285F4;">
+        <p style="color: #5e3c1c;cursor: pointer; display: inline-block;margin-top:0;">2022-23</p>
+        <select style="width: 20px;border: none;color: #5e3c1c;">
             <option value=""></option>
             <option value="" selected disabled>Choose previous years results</option>
             <option value="">2021-2022</option>
