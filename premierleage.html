@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier-League||Table</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 50px);
+            grid-template-rows: 110px;
+            background-color: #3f1052;
+            color: #ffff;
+            column-gap: 10rem;
+            margin-bottom: 1px;
+        }
+
+        .premier-league {
+            padding: 15px;
+            width: 130px;
+
+        }
+
+        .match {
+            padding-top: 80px;
+            padding-right: 80px;
+            padding-left: 10px;
+        }
+
+        .match:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            border-bottom: 5px solid #ffff;
+            transition: opacity 1s;
+            opacity: 0.8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.286);
+        }
+
+        .news {
+            padding-top: 80px;
+            padding-right: 70px;
+            padding-left: 20px;
+        }
+
+        .news:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            border-bottom: solid #ffff;
+            border-bottom-width: 5px;
+            transition: opacity 1s;
+            opacity: 0.8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.286);
+        }
+
+        .stand {
+            padding-top: 80px;
+            padding-right: 100px;
+            padding-left: 14px;
+        }
+
+        .stand:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            border-bottom: solid #ffff;
+            border-bottom-width: 5px;
+            transition: opacity 1s;
+            opacity: 0.8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.286);
+        }
+
+        .stats {
+            padding-top: 80px;
+            padding-right: 70px;
+            padding-left: 20px;
+        }
+
+        .stats:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            border-bottom: solid #ffff;
+            border-bottom-width: 5px;
+            transition: opacity 1s;
+            opacity: 0.8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.286);
+        }
+
+        .players {
+            padding-top: 80px;
+            padding-right: 90px;
+            padding-left: 20px;
+        }
+
+        .players:hover {
+            padding: 0 auto;
+            cursor: pointer;
+            border-bottom: solid #ffff;
+            border-bottom-width: 5px;
+            transition: opacity 1s;
+            opacity: 0.8;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.286);
+        }
+
+        .season {
+            border-bottom: 3px solid wheat;
+            border-radius: 8px;
+            width: 69.5%;
+            margin-left: 16%;
+            margin-top: 0;
+        }
+
+        .table {
+            margin-left: 16%;
+            margin-top: 20px;
+            border: 2px solid grey;
+            border-radius: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        tr:nth-child(even):hover {
+            background-color: gold;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tr:nth-child(odd):hover {
+            background-color: gray;
+            color: white;
+
+        }
+
+        .grey {
+            color: #70757A;
+        }
+
+        a:link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* selected link */
+        a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="premier-league">&#8592; <a class="p-league" href="https://www.premierleague.com"
+                target="_blank">Premier League</a></div>
+        <div class="match"><a class="p-league"
+                href="https://www.google.com/search?q=premier+league+table&rlz=1C1CHBD_enIN916IN917&oq=premier+league+table&aqs=chrome.0.69i59j46i67i131i433j0i67i131i433j0i67j0i67i131i433j0i67j69i60l2.7705j1j4&sourceid=chrome&ie=UTF-8#sie=lg;/g/11pz7zbpnb;2;/m/02_tc;mt;fp;1;;;"
+                target="_blank">MATCHES</a>
+        </div>
+        <div class="news"><a class="p-league"
+                href="https://www.google.com/search?q=premier+league+table&rlz=1C1CHBD_enIN916IN917&oq=premier+league+table&aqs=chrome.0.69i59j46i67i131i433j0i67i131i433j0i67j0i67i131i433j0i67j69i60l2.7705j1j4&sourceid=chrome&ie=UTF-8#sie=lg;/g/11pz7zbpnb;2;/m/02_tc;nw;fp;1;;;"
+                target="_blank">NEWS</a></div>
+        <div class="stand"><a class="p-league"
+                href="https://www.google.com/search?q=premier+league+table&rlz=1C1CHBD_enIN916IN917&oq=premier+league+table&aqs=chrome.0.69i59j46i67i131i433j0i67i131i433j0i67j0i67i131i433j0i67j69i60l2.7705j1j4&sourceid=chrome&ie=UTF-8#sie=lg;/g/11pz7zbpnb;2;/m/02_tc;st;fp;1;;;"
+                target="_blank">STANDINGS</a></div>
+        <div class="stats"><a class="p-league"
+                href="https://www.google.com/search?q=premier+league+table&rlz=1C1CHBD_enIN916IN917&oq=premier+league+table&aqs=chrome.0.69i59j46i67i131i433j0i67i131i433j0i67j0i67i131i433j0i67j69i60l2.7705j1j4&sourceid=chrome&ie=UTF-8#sie=lg;/g/11pz7zbpnb;2;/m/02_tc;lb;fp;1;;;"
+                target="_blank">STATS</a></div>
+        <div class="players"><a class="p-league"
+                href="https://www.google.com/search?q=premier+league+table&rlz=1C1CHBD_enIN916IN917&oq=premier+league+table&aqs=chrome.0.69i59j46i67i131i433j0i67i131i433j0i67j0i67i131i433j0i67j69i60l2.7705j1j4&sourceid=chrome&ie=UTF-8#sie=lg;/g/11pz7zbpnb;2;/m/02_tc;pl;fp;1;;;"
+                target="_blank">PLAYERS</a></div>
+    </div>
+    <div class="season">
+        <p>
+            Season
+        </p>
+        <p style="color: #4285F4;cursor: pointer; display: inline-block;margin-top:0;">2022-23</p>
+        <select style="width: 20px;border: none;color: #4285F4;">
+            <option value=""></option>
+            <option value="" selected disabled>Choose previous years results</option>
+            <option value="">2021-2022</option>
+            <option value="">2020-2021</option>
+            <option value="">2019-2020</option>
+            <option value="">2018-2019</option>
+            <option value="">2017-2018</option>
+            <option value="">2016-2017</option>
+            <option value="">2015-2016</option>
+        </select>
+    </div>
+    <table class="table" width="70%" border=0 cellspacing="0" cellpadding="10">
+        <tr>
+            <td class="grey" colspan="26">club</td>
+            <td class="grey">MP</td>
+            <td class="grey">W</td>
+            <td class="grey">D</td>
+            <td class="grey">L</td>
+            <td class="grey">GF</td>
+            <td class="grey">GA</td>
+            <td class="grey">GD</td>
+            <td class="grey">Pts</td>
+            <td class="grey">Last 5</td>
+        </tr>
+        <!-- gap here-->
+        <tr>
+            <td style="border-left: 2px solid #4285F4" ; colspan="26" ;>1 Arsenal</td>
+            <td>19</td>
+            <td>16</td>
+            <td>2</td>
+            <td>1</td>
+            <td>45</td>
+            <td>16</td>
+            <td>29</td>
+            <td>50</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td style="border-left: 2px solid #4285F4" colspan="26" ;>2 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td style="border-left: 2px solid #4285F4" ; colspan="26">3 Newcastle</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td style="border-left: 2px solid #FA7B17" colspan="26" ;>4 Man utd
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">5 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">6 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">7 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">8 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">9 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">10 Man city
+
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">11 Man city </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">12 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">13 Man city </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">14 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">15 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">16 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">17 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">18 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">19 Man city</td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+        <!--gap here-->
+        <tr>
+            <td colspan="26">20 Man city </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>Last 5</td>
+        </tr>
+    </table>
+</body>
+
+</html>
